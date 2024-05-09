@@ -18,7 +18,4 @@ ament_package()
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}
   PATTERN "setup_assistant.launch.py" EXCLUDE)
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME}
-  PATTERN "disable_collisions" EXCLUDE
-  PATTERN "end_effectors" EXCLUDE
-  PATTERN "scripts" EXCLUDE
 )
