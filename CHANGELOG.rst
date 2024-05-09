@@ -2,6 +2,27 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/auto-generated_srdf_files' into 'humble-devel'
+  auto generated srdf files
+  See merge request robots/tiago_moveit_config!81
+* include files
+* create srdf on the go
+* migrate update.sh
+* restructure srdf files
+* add disable collision files & end_effectors files
+* Merge branch 'omm/fix/launch_standarization' into 'humble-devel'
+  Launch files moved to TIAGo family standard
+  See merge request robots/tiago_moveit_config!79
+* Removing deprecated fake controllers
+* Launch files moved to TIAGo family standard
+* Merge branch 'dtk/fix/missing-dependency' into 'humble-devel'
+  Fix missing dependency
+  See merge request robots/tiago_moveit_config!78
+* Add missing moveit-ros-perception dependency
+* Contributors: Aina Irisarri, David ter Kuile, Noel Jimenez, Oscar, davidterkuile
+
 3.0.12 (2024-03-06)
 -------------------
 * Enable log colors for move_group and rviz nodes
