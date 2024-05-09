@@ -2,8 +2,8 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.13 (2024-05-09)
+-------------------
 * Merge branch 'feat/auto-generated_srdf_files' into 'humble-devel'
   auto generated srdf files
   See merge request robots/tiago_moveit_config!81
