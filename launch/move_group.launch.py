@@ -11,6 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import os
+from pathlib import Path
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
@@ -23,6 +25,7 @@ from launch_pal.robot_arguments import TiagoArgs
 from launch.substitutions import LaunchConfiguration
 from dataclasses import dataclass
 from launch_pal.arg_utils import CommonArgs
+from ament_index_python.packages import get_package_share_directory
 
 
 @dataclass(frozen=True)
@@ -55,13 +58,14 @@ def generate_launch_description():
 def declare_actions(
     launch_description: LaunchDescription, launch_args: LaunchArguments
 ):
+
     launch_description.add_action(OpaqueFunction(function=start_move_group))
     return
 
 
 def start_move_group(context, *args, **kwargs):
 
-    base_type = read_launch_argument("base_type", context)
+    # base_type = read_launch_argument("base_type", context)
     arm_type = read_launch_argument("arm_type", context)
     end_effector = read_launch_argument("end_effector", context)
     ft_sensor = read_launch_argument("ft_sensor", context)
@@ -72,11 +76,20 @@ def start_move_group(context, *args, **kwargs):
         end_effector=end_effector,
         ft_sensor=ft_sensor,
     )
+    srdf_file_path = Path(
+        os.path.join(
+            get_package_share_directory("tiago_moveit_config"),
+            "config", "srdf",
+            "tiago.srdf.xacro",
+        )
+    )
 
-    if base_type != "omni_base":
-        robot_description_semantic = f"config/srdf/tiago{hw_suffix}.srdf"
-    else:
-        robot_description_semantic = f"config/srdf/tiago_omni{hw_suffix}.srdf"
+    srdf_input_args = {
+        "arm_model": read_launch_argument("arm_type", context),
+        "end_effector": read_launch_argument("end_effector", context),
+        "ft_sensor": read_launch_argument("ft_sensor", context),
+        "base_type": read_launch_argument("base_type", context),
+    }
 
     # Trajectory Execution Functionality
     moveit_simple_controllers_path = f"config/controllers/controllers{hw_suffix}.yaml"
@@ -96,7 +109,7 @@ def start_move_group(context, *args, **kwargs):
     # The robot description is read from the topic /robot_description if the parameter is empty
     moveit_config = (
         MoveItConfigsBuilder("tiago")
-        .robot_description_semantic(file_path=robot_description_semantic)
+        .robot_description_semantic(file_path=srdf_file_path, mappings=srdf_input_args)
         .robot_description_kinematics(file_path=robot_description_kinematics)
         .trajectory_execution(moveit_simple_controllers_path)
         .planning_scene_monitor(planning_scene_monitor_parameters)
