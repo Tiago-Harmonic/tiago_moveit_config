@@ -11,9 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import os
-from pathlib import Path
 
+import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
 from launch_pal.arg_utils import read_launch_argument
@@ -65,7 +64,7 @@ def declare_actions(
 
 def start_move_group(context, *args, **kwargs):
 
-    # base_type = read_launch_argument("base_type", context)
+    base_type = read_launch_argument("base_type", context),
     arm_type = read_launch_argument("arm_type", context)
     end_effector = read_launch_argument("end_effector", context)
     ft_sensor = read_launch_argument("ft_sensor", context)
@@ -76,19 +75,18 @@ def start_move_group(context, *args, **kwargs):
         end_effector=end_effector,
         ft_sensor=ft_sensor,
     )
-    srdf_file_path = Path(
-        os.path.join(
-            get_package_share_directory("tiago_moveit_config"),
-            "config", "srdf",
-            "tiago.srdf.xacro",
-        )
+
+    srdf_file_path = os.path.join(
+        get_package_share_directory("tiago_moveit_config"),
+        "config", "srdf",
+        "tiago.srdf.xacro",
     )
 
     srdf_input_args = {
-        "arm_model": read_launch_argument("arm_type", context),
-        "end_effector": read_launch_argument("end_effector", context),
-        "ft_sensor": read_launch_argument("ft_sensor", context),
-        "base_type": read_launch_argument("base_type", context),
+        "arm_type": arm_type,
+        "end_effector": end_effector,
+        "ft_sensor": ft_sensor,
+        "base_type": base_type,
     }
 
     # Trajectory Execution Functionality

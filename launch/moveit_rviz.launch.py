@@ -74,10 +74,18 @@ def start_rviz(context, *args, **kwargs):
         ft_sensor=ft_sensor,
     )
 
-    if base_type != "omni_base":
-        robot_description_semantic = f"config/srdf/tiago{hw_suffix}.srdf"
-    else:
-        robot_description_semantic = f"config/srdf/tiago_omni{hw_suffix}.srdf"
+    srdf_file_path = os.path.join(
+        get_package_share_directory("tiago_moveit_config"),
+        "config", "srdf",
+        "tiago.srdf.xacro",
+    )
+
+    srdf_input_args = {
+        "arm_type": arm_type,
+        "end_effector": end_effector,
+        "ft_sensor": ft_sensor,
+        "base_type": base_type,
+    }
 
     # Trajectory Execution Functionality
     moveit_simple_controllers_path = f"config/controllers/controllers{hw_suffix}.yaml"
@@ -97,7 +105,7 @@ def start_rviz(context, *args, **kwargs):
     # The robot description is read from the topic /robot_description if the parameter is empty
     moveit_config = (
         MoveItConfigsBuilder("tiago")
-        .robot_description_semantic(file_path=robot_description_semantic)
+        .robot_description_semantic(file_path=srdf_file_path, mappings=srdf_input_args)
         .robot_description_kinematics(file_path=robot_description_kinematics)
         .trajectory_execution(moveit_simple_controllers_path)
         .planning_scene_monitor(planning_scene_monitor_parameters)
