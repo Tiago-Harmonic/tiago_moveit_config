@@ -2,8 +2,8 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.14 (2024-05-13)
+-------------------
 * Merge branch 'omm/feat/imarkers' into 'humble-devel'
   Restored proper rviz launch file with interactive markers
   See merge request robots/tiago_moveit_config!82
