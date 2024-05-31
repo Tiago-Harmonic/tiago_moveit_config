@@ -61,7 +61,6 @@
     <disable_collisions link1="base_link" link2="gripper_grasping_frame" reason="Never"/>
     <disable_collisions link1="base_link" link2="gripper_tool_link" reason="Never"/>
     <disable_collisions link1="base_rear_laser_link" link2="gripper_grasping_frame" reason="Never"/>
-    <disable_collisions link1="base_rear_laser_link" link2="gripper_link" reason="Never"/>
     <disable_collisions link1="base_rear_laser_link" link2="gripper_tool_link" reason="Never"/>
     <disable_collisions link1="gripper_grasping_frame" link2="head_1_link" reason="Never"/>
     <disable_collisions link1="gripper_grasping_frame" link2="head_2_link" reason="Never"/>
