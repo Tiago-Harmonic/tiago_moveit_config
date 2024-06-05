@@ -3,6 +3,7 @@
   <xacro:include filename="$(find tiago_moveit_config)/config/srdf/disable_collisions/tiago_no-ee_schunk-ft.srdf.xacro" />
   <xacro:include filename="$(find tiago_moveit_config)/config/srdf/disable_collisions/pal-gripper_schunk-ft.srdf.xacro" />
     <disable_collisions link1="arm_1_link" link2="gripper_grasping_frame" reason="Never"/>
+    <disable_collisions link1="arm_1_link" link2="gripper_left_finger_link" reason="Never"/>
     <disable_collisions link1="arm_1_link" link2="gripper_link" reason="Never"/>
     <disable_collisions link1="arm_1_link" link2="gripper_tool_link" reason="Never"/>
     <disable_collisions link1="arm_2_link" link2="gripper_grasping_frame" reason="Never"/>
@@ -35,6 +36,7 @@
     <disable_collisions link1="arm_7_link" link2="gripper_link" reason="Never"/>
     <disable_collisions link1="arm_7_link" link2="gripper_right_finger_link" reason="Never"/>
     <disable_collisions link1="arm_7_link" link2="gripper_tool_link" reason="Never"/>
+    <disable_collisions link1="arm_tool_link" link2="base_antenna_right_link" reason="Never"/>
     <disable_collisions link1="arm_tool_link" link2="gripper_grasping_frame" reason="Never"/>
     <disable_collisions link1="arm_tool_link" link2="gripper_left_finger_link" reason="Never"/>
     <disable_collisions link1="arm_tool_link" link2="gripper_link" reason="Never"/>
@@ -107,6 +109,7 @@
     <disable_collisions link1="caster_back_left_1_link" link2="gripper_right_finger_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_1_link" link2="gripper_tool_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_grasping_frame" reason="Never"/>
+    <disable_collisions link1="caster_back_left_2_link" link2="gripper_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_tool_link" reason="Never"/>
     <disable_collisions link1="caster_back_right_1_link" link2="gripper_grasping_frame" reason="Never"/>
     <disable_collisions link1="caster_back_right_1_link" link2="gripper_left_finger_link" reason="Never"/>

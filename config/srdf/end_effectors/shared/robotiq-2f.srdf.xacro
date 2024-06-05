@@ -23,7 +23,10 @@
         <passive_joint name="${name}_right_inner_knuckle_joint" />
         <passive_joint name="${name}_right_outer_knuckle_joint" />
         <passive_joint name="${name}_right_inner_finger_joint" />
+
         <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
         <end_effector name="${name}" parent_link="${arm}_tool_link" group="${name}" parent_group="${arm}_torso" />
+        <disable_collisions link1="${name}_left_inner_finger_pad" link2="${name}_right_inner_finger_pad" reason="Never"/>
+
     </xacro:macro>
 </robot>

@@ -510,6 +510,7 @@
     <disable_collisions link1="caster_back_left_1_link" link2="gripper_right_outer_finger_dummy_mimic_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_1_link" link2="gripper_right_outer_knuckle" reason="Never"/>
     <disable_collisions link1="caster_back_left_1_link" link2="gripper_right_outer_knuckle_dummy_mimic_link" reason="Never"/>
+    <disable_collisions link1="caster_back_left_2_link" link2="gripper_base_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_coupler_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_grasping_frame" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_grasping_frame_Y" reason="Never"/>
@@ -518,10 +519,14 @@
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_left_inner_finger_pad_dummy_mimic_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_left_inner_knuckle_dummy_mimic_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_left_outer_finger_dummy_mimic_link" reason="Never"/>
+    <disable_collisions link1="caster_back_left_2_link" link2="gripper_left_outer_knuckle" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_inner_finger_dummy_mimic_link" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_inner_finger_pad_dummy_mimic_link" reason="Never"/>
+    <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_inner_knuckle" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_inner_knuckle_dummy_mimic_link" reason="Never"/>
+    <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_outer_finger" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_outer_finger_dummy_mimic_link" reason="Never"/>
+    <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_outer_knuckle" reason="Never"/>
     <disable_collisions link1="caster_back_left_2_link" link2="gripper_right_outer_knuckle_dummy_mimic_link" reason="Never"/>
     <disable_collisions link1="caster_back_right_1_link" link2="gripper_base_link" reason="Never"/>
     <disable_collisions link1="caster_back_right_1_link" link2="gripper_coupler_link" reason="Never"/>
