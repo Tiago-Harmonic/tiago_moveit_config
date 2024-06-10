@@ -2,6 +2,16 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/motions' into 'humble-devel'
+  add custom file for posible costumers
+  See merge request robots/tiago_moveit_config!83
+* new disable collision for robotiq
+* add disable collision
+* add custom file for posible costumers
+* Contributors: Aina, davidterkuile
+
 3.0.14 (2024-05-13)
 -------------------
 * Merge branch 'omm/feat/imarkers' into 'humble-devel'
