@@ -2,8 +2,8 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.15 (2024-06-10)
+-------------------
 * Merge branch 'feat/motions' into 'humble-devel'
   add custom file for posible costumers
   See merge request robots/tiago_moveit_config!83
