@@ -2,6 +2,11 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add warning for pal_module_cmake not found
+* Contributors: Noel Jimenez
+
 3.0.16 (2024-06-26)
 -------------------
 * Merge branch 'dtk/move-robot-args' into 'humble-devel'
