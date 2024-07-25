@@ -2,6 +2,11 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Change parameter to arm_type
+* Contributors: thomas.peyrucain
+
 3.0.17 (2024-07-09)
 -------------------
 * Add warning for pal_module_cmake not found
