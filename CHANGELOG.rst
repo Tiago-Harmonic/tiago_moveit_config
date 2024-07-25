@@ -2,8 +2,8 @@
 Changelog for package tiago_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.18 (2024-07-25)
+-------------------
 * Change parameter to arm_type
 * Contributors: thomas.peyrucain
 
