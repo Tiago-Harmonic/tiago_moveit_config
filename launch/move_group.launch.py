@@ -113,7 +113,7 @@ def start_move_group(context, *args, **kwargs):
         .planning_scene_monitor(planning_scene_monitor_parameters)
         .joint_limits(file_path=joint_limits)
         .planning_pipelines(
-            pipelines=["ompl", "chomp"], default_planning_pipeline="ompl"
+            pipelines=["ompl"], default_planning_pipeline="ompl"
         )
         .pilz_cartesian_limits(file_path=pilz_cartesian_limits)
     )
